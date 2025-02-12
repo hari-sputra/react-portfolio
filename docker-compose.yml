@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  portfolio_web:
+     image: portfolio-frontend/web:1.0.0-dev
+     container_name: portfolio_web
+     restart: always
+     ports:
+      - "3001:80" 
