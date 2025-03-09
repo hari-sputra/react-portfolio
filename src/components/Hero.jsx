@@ -6,6 +6,8 @@ import CanvasLoader from "./CanvasLoader";
 
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
+import Target from "./Target";
+import ReactLogo from "./ReactLogo";
 
 const Hero = () => {
   //   const x = useControls("HackerRoom", {
@@ -46,6 +48,11 @@ const Hero = () => {
               //   rotation={[x.rotationX, x.rotationY, x.rotationZ]}
               //   scale={[x.scale, x.scale, x.scale]}
             />
+
+            <group>
+              <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+            </group>
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
